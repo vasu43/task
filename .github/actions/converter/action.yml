@@ -2,7 +2,7 @@ name: Convert to Upper Case
 
 inputs:
   test_string:
-    type: String
+    type: string
     required: true
 
 runs: 

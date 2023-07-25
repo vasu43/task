@@ -1,0 +1,17 @@
+name: Take String to Convert into Upper Case
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_string:
+        type: String
+        required: true
+
+jobs:
+  call_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: call
+        uses: vasu43/task/.github/actions/converter/@main
+        with:
+          test_string: ${{github.event.inputs.test_string}}

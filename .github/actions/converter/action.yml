@@ -10,7 +10,7 @@ runs:
   steps:
    - name: Convert
      run: |
-            if [[ '''\${{github.event.inputs.test_string}}\''' =~ ^([a-zA-Z]| )+$ ]];then
+            if [[ '''${{github.event.inputs.test_string}}''' =~ ^([a-zA-Z]| )+$ ]];then
               echo "${{github.event.inputs.test_string}}" | tr '[:lower:]' '[:upper:]'
             else
               echo "There is a numeric value"
